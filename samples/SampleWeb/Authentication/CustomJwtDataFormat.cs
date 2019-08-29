@@ -43,7 +43,7 @@ namespace SampleWeb.Authentication
             catch (ArgumentException) {
                 return null;
             }
-            return new AuthenticationTicket(principal, new AuthenticationProperties(), "Cookie");
+            return new AuthenticationTicket(principal, new Microsoft.AspNetCore.Authentication.AuthenticationProperties(), "Cookie");
         }
 
         public string Protect(AuthenticationTicket data) {

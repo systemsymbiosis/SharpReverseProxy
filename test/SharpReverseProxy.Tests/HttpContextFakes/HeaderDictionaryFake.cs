@@ -27,6 +27,8 @@ namespace SharpReverseProxy.Tests.HttpContextFakes {
 
         public int Count => _headers.Count;
 
+        public long? ContentLength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void Add(string key, StringValues value) {
             if(_parentResponse.HasStarted) {
                 ThrowReponseAlreadyStartedException();
